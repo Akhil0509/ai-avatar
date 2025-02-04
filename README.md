@@ -38,7 +38,7 @@ hindi-voice-assistant/
 1. Clone and set up environment:
 ```bash
 git clone https://github.com/Akhil0509/ai-avatar.git
-cd hindi-voice-assistant
+cd ai-avatar
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
 pip install -r requirements.txt
