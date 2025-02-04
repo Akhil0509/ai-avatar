@@ -37,7 +37,7 @@ hindi-voice-assistant/
 
 1. Clone and set up environment:
 ```bash
-git clone <repository-url>
+git clone https://github.com/Akhil0509/ai-avatar.git
 cd hindi-voice-assistant
 python -m venv venv
 source venv/bin/activate  # Windows: venv\Scripts\activate
@@ -97,21 +97,3 @@ Key packages:
 - Groq API: AI processing
 - gTTS: Text-to-speech
 - Pygame: Audio playback
-
-For complete list, see `requirements.txt`.
-
-## Contributing
-
-1. Fork the repository
-2. Create feature branch
-3. Commit changes
-4. Push to branch
-5. Submit pull request
-
-## License
-
-MIT License
-
-## Support
-
-For issues and feature requests, please use the GitHub issue tracker.
