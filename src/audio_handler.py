@@ -10,9 +10,9 @@ class AudioHandler:
         self.sample_rate = 16000
         self.pyaudio = pyaudio.PyAudio()
 
-    def record_audio(self, duration=10):
-        """Record audio from the microphone using PyAudio."""
-        print("Recording...")
+    def record_audio(self):
+        """Record audio from the microphone using PyAudio. Records until user stops."""
+        print("Recording... Press Enter to stop recording.")
         
         stream = self.pyaudio.open(
             format=self.format,
@@ -23,11 +23,24 @@ class AudioHandler:
         )
         
         frames = []
-        for _ in range(0, int(self.sample_rate / self.chunk * duration)):
-            data = stream.read(self.chunk)
-            frames.append(data)
+        try:
+            import threading
+            stop_recording = threading.Event()
+            
+            def wait_for_enter():
+                input()
+                stop_recording.set()
+            
+            threading.Thread(target=wait_for_enter, daemon=True).start()
+            
+            while not stop_recording.is_set():
+                data = stream.read(self.chunk)
+                frames.append(data)
+                
+        except KeyboardInterrupt:
+            pass
         
-        print("Recording finished.")
+        print("\nRecording finished.")
         
         stream.stop_stream()
         stream.close()

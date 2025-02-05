@@ -54,7 +54,8 @@ GROQ_API_KEY=your_key_here
 ```bash
 # Record mode
 python main.py --speak
-
+```
+```bash
 # File processing mode
 python main.py --file
 ```
@@ -72,7 +73,7 @@ The project follows a modular design with four main components:
 
 1. Recording Mode:
    - Run with `--speak` flag
-   - Speak in Hindi for 10 seconds
+   - Speak in Hindi/English and press Enter to end recording
    - Wait for AI response
 
 2. File Mode:
@@ -99,19 +100,3 @@ Key packages:
 - Pygame: Audio playback
 
 For complete list, see `requirements.txt`.
-
-## Contributing
-
-1. Fork the repository
-2. Create feature branch
-3. Commit changes
-4. Push to branch
-5. Submit pull request
-
-## License
-
-MIT License
-
-## Support
-
-For issues and feature requests, please use the GitHub issue tracker.
