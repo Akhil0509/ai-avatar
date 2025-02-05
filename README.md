@@ -1,6 +1,6 @@
-# Hindi Voice Assistant
+# Hindi AI Avatar
 
-An intelligent voice assistant that processes Hindi speech, generates AI responses, and speaks back in Hindi. Built with modular Python architecture using AssemblyAI for speech recognition and Groq for AI responses.
+An intelligent voice assistant that processes Hindi/English speech, generates AI responses, and speaks back in Hindi. Built with modular Python architecture using AssemblyAI for speech recognition and Groq for AI responses.
 
 ## Features
 
@@ -12,7 +12,7 @@ An intelligent voice assistant that processes Hindi speech, generates AI respons
 
 ## Project Structure
 ```
-hindi-voice-assistant/
+ai-avatar/
 ├── src/
 │   ├── __init__.py
 │   ├── audio_handler.py     # Audio recording and file operations
